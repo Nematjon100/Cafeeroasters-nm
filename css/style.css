@@ -1,8 +1,15 @@
 
 /*---------------- CUSTOM PROPORTY -------*/
 :root {
-  --primary: #333;
-  --text-color: #;
+  --text-color: #333;
+  --accent-color-green: #0A775F;
+  --accent-color-green-80: rgba(10, 119, 95, 0.8);
+  --accent-color-green-60: rgba(10, 119, 95, 0.6);
+  --accent-color-brown: rgb(201, 155, 103);
+  --accent-color-brown-80: rgba(201, 155, 103, 0.8);
+  --accent-color-brown-60: rgba(201, 155, 103, 0.6);
+  --light-brown:#F3D7B7;
+  --outline-color: var(--accent-color-green);
 }
 
 /* ------------------FONTS--------------- */
@@ -65,24 +72,179 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* -------------------------BUTTONS----------------------------- */
-.button {
 
+*:focus {
+  outline: 2px dashed var(--accent-color-green);
+  outline-offset: 3px;
 }
 
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1100px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-right: auto;
   margin-left: auto;
 }
 
+/* -------------------BUTTONS------------------ */
+.button {
+  display: inline-block;
+  padding: 16px 24px;
+  border: 0;
+  border-radius: 100px;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.button__green {
+  background-color: var(--accent-color-green);
+}
+
+.button__green:hover {
+  background-color: var(--accent-color-green-80);
+}
+
+.button__green:active {
+  background-color: var(--accent-color-green-60);
+}
+
+.button__brown {
+  background-color: var(--accent-color-brown);
+}
+
+.button__brown:hover {
+  background-color: var(--accent-color-brown-80);
+}
+
+.button__brown:active {
+  background-color: var(--accent-color-brown-60);
+}
 
 /* ------------------------HEADER-------------------------- */
 
+.site-header-hero-wrapper {
+  background-color: var(--light-brown);
+  background-image: url(/img/light-bg-img.jpg);
+}
+
+.site-header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.site-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.site-header-logo-link {
+  flex-shrink: 0;
+  display: flex;
+  text-decoration: none;
+}
+
+.site-header-logo-link:hover {
+  opacity: 0.8;
+}
+
+.site-header-logo-link:active {
+  opacity: 0.6;
+}
+
+.site-header-logo-img {
+  width: 235px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.sitenav__list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.sitenav__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.sitenav__link {
+  display: block;
+  color: var(--text-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.sitenav__link:hover {
+  color: var(--accent-color);
+}
+
+.sitenav__link:hover {
+  opacity: 0.6;
+}
+
+/*------------------- hero ----------------*/
+.hero {
+}
+.hero__container {
+  display: flex;
+  padding: 0;
+}
+
+.hero__content {
+  width: 100%;
+  max-width: 730px;
+  padding-top: 116px;
+  padding-bottom: 100px;
+  padding-left: 150px;
+  padding-right: 115px;
+}
+
+.hero__heading2 {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 64px;
+  font-weight: bold;
+  line-height: normal;
+  color: black;
+}
+
+.hero__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.hero__text:not(:last-child) {
+  margin-bottom: 34px;
+}
+
+.hero__img {
+  width: 710px;
+  height: 596px;
+  object-fit: cover;
+}
+
+.hero__img-index {
+  height: 696px;
+}
 
 
 /* MAIN-CONTENT */
@@ -90,7 +252,6 @@ img {
   flex-grow: 1;
 }
 
-/* ---------------------------HERO-------------------------------- */
 
 
 
@@ -102,7 +263,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-  .hero__img {
-    background-image: url('');
+  .site-header-hero-wrapper {
+    background-image: url(/img/light-bg-img@2x.jpg);
   }
 }
