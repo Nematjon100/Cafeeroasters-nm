@@ -1,11 +1,40 @@
 
-/* GLOBAL */
+/*---------------- CUSTOM PROPORTY -------*/
 :root {
-  --primary: #;
+  --primary: #333;
   --text-color: #;
 }
 
+/* ------------------FONTS--------------- */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../Fonts/Roboto-Bold.woff2') format('woff2'),
+      url('../Fonts/Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('../Fonts/Roboto-Medium.woff2') format('woff2'),
+      url('../Fonts/Roboto-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../Fonts/Roboto-Regular.woff2') format('woff2'),
+      url('../Fonts/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ------------------GLOBAL----------------- */
 html {
   box-sizing: border-box;
   height: 100%;
@@ -25,8 +54,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.75;
   font-weight: 400;
   background-color: #fff;
   color: var(--text-color);
@@ -38,7 +67,7 @@ img {
 }
 /* -------------------------BUTTONS----------------------------- */
 .button {
-  
+
 }
 
 /* CONTAINER */
