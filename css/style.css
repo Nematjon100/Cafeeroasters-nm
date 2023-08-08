@@ -9,6 +9,7 @@
   --accent-color-brown-80: rgba(201, 155, 103, 0.8);
   --accent-color-brown-60: rgba(201, 155, 103, 0.6);
   --light-brown:#F3D7B7;
+  --light-bg: #F8F8F2;
   --outline-color: var(--accent-color-green);
 }
 
@@ -200,8 +201,7 @@ img {
 }
 
 /*------------------- hero ----------------*/
-.hero {
-}
+
 .hero__container {
   display: flex;
   padding: 0;
@@ -250,7 +250,77 @@ img {
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
+
+
+/* INDEX-COLLECTION */
+.index-collection__inner {
+  padding: 50px 143px;
+  padding-bottom: 50px;
+  background-color: var(--light-bg);
+  background-image: url('/img/index-collection-bg.jpg');
+}
+
+.index-collection__heading {
+  margin-top: 0;
+  margin-bottom: 80px;
+  font-size: 50px;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.index-collection__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.index-collection__item {
+  display: flex;
+  align-items: center;
+}
+
+.index-collection__item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.index-collection__img {
+  flex-shrink: 0;
+  width: 450px;
+  height: 375px;
+  object-fit: cover;
+}
+
+.index-collection__info {
+  flex-grow: 1;
+  padding-left: 117px;
+  padding-right: 117px;
+}
+
+.index-collection__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.index-collection__text {
+  margin: 0;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+.index-collection__text:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 
 
 
@@ -264,6 +334,11 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   .site-header-hero-wrapper {
-    background-image: url(/img/light-bg-img@2x.jpg);
+    background-image: url('/img/light-bg-img@2x.jpg');
   }
+
+  .index-collection__inner {
+    background-image: url('/img/index-collection-bg@2x.jpg');
+  }
+
 }
