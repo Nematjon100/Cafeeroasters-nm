@@ -170,6 +170,7 @@ img {
   object-fit: contain;
 }
 
+/* SITENAV */
 .sitenav__list {
   display: flex;
   align-items: center;
@@ -192,8 +193,13 @@ img {
   white-space: nowrap;
 }
 
+.sitenav__medium-font .sitenav__link {
+  font-size: 16px;
+  line-height: normal;
+}
+
 .sitenav__link:hover {
-  color: var(--accent-color);
+  color: var(--accent-color-green);
 }
 
 .sitenav__link:hover {
@@ -482,10 +488,65 @@ img {
 .howitworks__action:focus {
   outline-color: var(--accent-color-brown);
 }
-.button {
+
+
+/* SITE FOOTER */
+.site-footer {
+  padding: 68px 50px;
+  background-color: var(--light-brown);
+  background-image: url('/img/light-bg-img.jpg');
 }
-.button__brown {
+
+.site-footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.site-footer-logo-link {
+  display: flex;
+}
+
+.site-footer-logo-link:hover {
+  opacity: 0.8;
+}
+
+.site-footer-logo-link:active {
+  opacity: 0.6;
+}
+
+.site-footer-logo-img {
+  flex-shrink: 0;
+  width: 235px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.socials__link {
+  display: flex;
+  color: #333;
+}
+
+.socials__link:hover {
+  color: var(--accent-color-green);
+}
+
+.socials__link:active {
+  opacity: 0.6;
+}
+
 
 
 /* -------------------------RETINA DISPLAY------------------------ */
@@ -496,7 +557,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-  .site-header-hero-wrapper {
+  .site-header-hero-wrapper, .site-footer {
     background-image: url('/img/light-bg-img@2x.jpg');
   }
 
